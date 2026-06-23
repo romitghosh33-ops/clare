@@ -1,14 +1,5 @@
 {
   "framework": "nextjs",
   "buildCommand": "next build",
-  "outputDirectory": ".next",
-  "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": "@supabase-url",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase-anon-key",
-    "SUPABASE_SERVICE_ROLE_KEY": "@supabase-service-role-key",
-    "STRIPE_SECRET_KEY": "@stripe-secret-key",
-    "STRIPE_WEBHOOK_SECRET": "@stripe-webhook-secret",
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "@stripe-publishable-key",
-    "NEXT_PUBLIC_APP_URL": "@app-url"
-  }
+  "outputDirectory": ".next"
 }
