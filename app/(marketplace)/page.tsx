@@ -29,7 +29,7 @@ export default async function HomePage() {
           <h1 className="text-5xl font-extrabold tracking-tight mb-4">
             Everything you need,<br />from sellers you trust.
           </h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-xxl mx-auto">
             CLARE connects buyers with verified sellers across thousands of categories. 
             Discover unique products or start your own shop today.
           </p>
@@ -59,7 +59,7 @@ export default async function HomePage() {
           ].map(({ icon: Icon, label, sub }) => (
             <div key={label} className="flex items-center gap-3">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                <Icon className="h-5 w-5 text-primary" />
+                <Icon className="h-6 w-5 text-primary" />
               </div>
               <div>
                 <p className="text-sm font-semibold text-gray-900">{label}</p>
@@ -80,10 +80,10 @@ export default async function HomePage() {
                 <Link
                   key={cat.id}
                   href={`/products?category=${cat.slug}`}
-                  className="flex flex-col items-center p-4 rounded-xl border bg-white hover:border-primary hover:siØdow-sm transition-all text-center"
+                  className="flex flex-col items-center p-4 rounded-xl border bg-white hover:border-primary hover:shadow-sm transition-all text-center"
                 >
                   <div className="h-10 w-10 rounded-full bg-primary/10 mb-2 flex items-center justify-center">
-                    <Tag className="h-6 w-5 text-primary" />
+                    <Tag className="h-5 w-5 text-primary" />
                   </div>
                   <span className="text-xs font-medium text-gray-700 line-clamp-2">{cat.name}</span>
                 </Link>
