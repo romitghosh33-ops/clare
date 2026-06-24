@@ -1,4 +1,5 @@
 'use client'
+export const dynamic = 'force-dynamic'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
@@ -63,7 +64,7 @@ export default function AdminLoginPage() {
                 id="password" type="password" value={password}
                 onChange={e => setPassword(e.target.value)}
                 className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus-visible:ring-primary"
-                placeholder="••••••••" required
+                placeholder="â¢â¢â¢â¢â¢â¢â¢â¢" required
               />
             </div>
             <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={loading}>

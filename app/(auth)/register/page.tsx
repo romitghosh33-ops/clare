@@ -1,4 +1,5 @@
 'use client'
+export const dynamic = 'force-dynamic'
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -34,7 +35,7 @@ export default function RegisterPage() {
   if (success) return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <Card className="w-full max-w-md text-center p-8">
-        <div className="text-green-500 text-5xl mb-4">✓</div>
+        <div className="text-green-500 text-5xl mb-4">â</div>
         <h2 className="text-xl font-bold mb-2">Check your email</h2>
         <p className="text-gray-500 text-sm">We sent a confirmation link to <strong>{form.email}</strong>. Click it to activate your account.</p>
       </Card>
@@ -74,7 +75,7 @@ export default function RegisterPage() {
               </div>
               <div className="space-y-1">
                 <Label htmlFor="confirm">Confirm Password</Label>
-                <Input id="confirm" type="password" value={form.confirm} onChange={e => setForm(f => ({...f, confirm: e.target.value}))} placeholder="••••••••" required />
+                <Input id="confirm" type="password" value={form.confirm} onChange={e => setForm(f => ({...f, confirm: e.target.value}))} placeholder="â¢â¢â¢â¢â¢â¢â¢â¢" required />
               </div>
               <Button type="submit" className="w-full" disabled={loading}>
                 {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
