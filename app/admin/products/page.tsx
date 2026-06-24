@@ -24,7 +24,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
   const { data: products } = await query
 
   const statuses = ['', 'active', 'draft', 'paused', 'archived']
-  const statusColor: Record<string, string> = {
+  const statusColor: { [key: string]: string } = {
     active: 'bg-green-100 text-green-800',
     draft: 'bg-gray-100 text-gray-700',
     paused: 'bg-yellow-100 text-yellow-800',
@@ -91,7 +91,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
                     <TableCell className="text-sm text-gray-600">{p.seller?.shop_name ?? '—'}</TableCell>
                     <TableCell className="text-sm text-gray-500">{p.category?.name ?? '—'}</TableCell>
                     <TableCell className="font-medium text-sm">{formatCurrency(p.price)}</TableCell>
-                    <TableCell className="text-sm">{p.track_inventory ? p.stock_quantity : '∞'}|/TableCell>
+                    <TableCell className="text-sm">{p.track_inventory ? p.stock_quantity : '∞'}</TableCell>
                     <TableCell className="text-sm">{p.total_sales}</TableCell>
                     <TableCell>
                       <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium capitalize ${statusColor[p.status]}`}>
